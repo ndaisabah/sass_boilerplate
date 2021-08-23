@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin cover-background {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+// Media Queries - Breakpoint
+/*
+    To Use
+    @include sm{
+        //code here
+    }
+*/
+$medium: 768px;
+$large: 1024px;
+$xlarge: 1280px;
+
+@mixin md {
+	@media only screen and (min-width: $medium) {
+		@content;
+	}
+}
+@mixin lg {
+	@media only screen and (min-width: $large) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media only screen and (min-width: $xlarge) {
+		@content;
+	}
+}
